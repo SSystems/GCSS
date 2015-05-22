@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import com.globacomp.ssystem.common.CaseConfiguration;
 import com.globacomp.ssystem.data.model.Case;
 import com.globacomp.ssystem.data.model.User;
 import com.globacomp.ssystem.service.AuthenticationService;
@@ -97,6 +98,26 @@ public class CaseController extends AbstractApplicationController<CaseForm, Case
 			throw new Exception("UCR not found for request");
 		
 		caseService.acceptAssignment(UCR);
+		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
+		return HANDLER_CASES_LIST_VIEW;
+	}
+	
+	public String doStartProcessing(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws Exception {
+		String UCR = request.getParameter("UCR");
+		if(StringUtils.isBlank(UCR))
+			throw new Exception("UCR not found for request");
+		
+		caseService.updateCaseStatus(UCR, CaseConfiguration.STATUS.UNDER_PROCESSING_STATUS.getStatus());
+		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
+		return HANDLER_CASES_LIST_VIEW;
+	}
+	
+	public String doHoldProcessing(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws Exception {
+		String UCR = request.getParameter("UCR");
+		if(StringUtils.isBlank(UCR))
+			throw new Exception("UCR not found for request");
+		
+		caseService.updateCaseStatus(UCR, CaseConfiguration.STATUS.PROCESSING_HOLD_STATUS.getStatus());
 		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
 		return HANDLER_CASES_LIST_VIEW;
 	}

@@ -134,4 +134,22 @@ public class CaseServiceImpl implements CaseService {
 		return caseDao.update(c);
 	}
 
+	@Override
+	@Transactional(propagation=Propagation.REQUIRED)
+	public Case updateCaseStatus(String UCR, int caseStatus) throws Exception {
+		// TODO Auto-generated method stub
+		Case c = caseDao.findByUCR(UCR);
+		if(c == null)
+			throw new CaseNotFoundException(UCR);
+		System.out.println("Web User:"+WebUser.getUser().getId());
+		System.out.println("Case Handler:"+c.getHandler().getId());
+		
+		if(!CaseConfiguration.getStatusMap().containsKey(caseStatus))
+			throw new Exception("Invalid Case Status Exception");
+		
+		c.setCaseStatus(caseStatus);
+		return caseDao.update(c);
+			
+	}
+
 }

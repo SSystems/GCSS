@@ -28,11 +28,34 @@
 				</td>
 				<td> ${cas.creationDate} </td>
        		 <td> <%= CaseConfiguration.getStatusMap().get(((Case)pageContext.findAttribute("cas")).getCaseStatus()) %> </td>
-				<td> <a href="accept.do?UCR=${cas.UCR}">Accept</a> &nbsp;
+				<td> 
+					<c:if test="${cas.caseStatus==10 || cas.caseStatus==15}">
+						<a href="assign.do?UCR=${cas.UCR}">Assign</a> &nbsp;
+					</c:if>
+					<c:if test="${cas.caseStatus==20}">
+						<a href="accept.do?UCR=${cas.UCR}">Accept</a> &nbsp;
+					</c:if>
+					<c:if test="${cas.caseStatus==25}">
+						<a href="startProcessing.do?UCR=${cas.UCR}">Start Processing</a> &nbsp;
+					</c:if>
+					<c:if test="${cas.caseStatus==30}">
+						<a href="holdProcessing.do?UCR=${cas.UCR}">Hold</a> &nbsp;&nbsp;
+						<td>
+						<a href="#?UCR=${cas.UCR}">Complete</a>
+						</td>
+						 
+					</c:if>
+					<c:if test="${cas.caseStatus==35}">
+						<a href="startProcessing.do?UCR=${cas.UCR}">Start Processing</a> &nbsp;
+					</c:if>
+					<c:if test="${cas.caseStatus==40}">
+						<a href="#?UCR=${cas.UCR}">Accept Completion</a> &nbsp;
+					</c:if>
 				</td>
+				<!-- 
 				<td>
 					<a href="#">Reject</a>
-				</td>
+				</td>  -->
 			</tr>
 			</c:forEach>
 			<tr>
