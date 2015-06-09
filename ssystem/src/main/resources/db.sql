@@ -1,3 +1,15 @@
+/*
+create tablespace gcss_tabspace datafile 'gcss.dat' size 10M autoextend on;
+
+create user gcss identified by gcss default tablespace gcss_tabspace temporary tablespace temp;
+
+grant create session to gcss;
+grant create table to gcss;
+grant unlimited tablespace to gcss;
+*/
+
+
+
 drop table login_master;
 drop table roles_master;
 drop table case_files;

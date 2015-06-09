@@ -28,5 +28,7 @@ public interface CaseService extends ApplicationService {
 	
 	Case acceptAssignment(String UCR) throws Exception;
 	
+	Case rejectAssignment(String UCR) throws Exception;
+	
 	Case updateCaseStatus(String UCR, int caseStatus) throws Exception;
 }

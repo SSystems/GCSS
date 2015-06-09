@@ -116,6 +116,26 @@ public class CaseServiceImpl implements CaseService {
 
 	@Override
 	@Transactional(propagation=Propagation.REQUIRED)
+	public Case rejectAssignment(String UCR) throws Exception {
+		// TODO Auto-generated method stub
+		Case c = caseDao.findByUCR(UCR);
+		if(c == null)
+			throw new CaseNotFoundException(UCR);
+		System.out.println("Web User:"+WebUser.getUser().getId());
+		System.out.println("Case Handler:"+c.getHandler().getId());
+		
+		if(WebUser.getUser().getId()!=null && !WebUser.getUser().getId().equalsIgnoreCase(c.getHandler().getId()))
+			throw new IllegalStateException("You can not reject this case as it is not assigned to you..!");
+		if(c.getCaseStatus()!= STATUS.ASSIGNMENT_ACCEPTANCE_PENDING_STATUS.getStatus())
+			throw new IllegalStateException("You can not reject this case. Current Case Status is:"+CaseConfiguration.getStatusMap().get(c.getCaseStatus()));
+		
+		c.setCaseStatus(CaseConfiguration.STATUS.UNASSIGNED_STATUS.getStatus());
+		
+		return caseDao.update(c);
+	}
+	
+	@Override
+	@Transactional(propagation=Propagation.REQUIRED)
 	public Case acceptAssignment(String UCR) throws Exception {
 		// TODO Auto-generated method stub
 		Case c = caseDao.findByUCR(UCR);
@@ -147,9 +167,14 @@ public class CaseServiceImpl implements CaseService {
 		if(!CaseConfiguration.getStatusMap().containsKey(caseStatus))
 			throw new Exception("Invalid Case Status Exception");
 		
+		if(WebUser.getUser().getId()!=null && !WebUser.getUser().getId().equalsIgnoreCase(c.getHandler().getId()))
+			throw new IllegalStateException("You can not change the status it is not assigned to you..!");
+		
 		c.setCaseStatus(caseStatus);
 		return caseDao.update(c);
 			
 	}
+
+	
 
 }

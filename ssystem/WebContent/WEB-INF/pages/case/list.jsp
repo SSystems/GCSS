@@ -1,3 +1,5 @@
+<%@page import="com.globacomp.ssystem.data.model.Case"%>
+<%@page import="com.globacomp.ssystem.common.CaseConfiguration"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -27,9 +29,13 @@
 				</c:forEach>
 				</td>
 				<td> ${cas.creationDate} </td>
-				<td> ${cas.caseStatus } </td>
-				<td> <a href="selectHanlder.do?UCR=${cas.UCR}">Assign</a> &nbsp;
-					<a href="#">Delete</a> 
+				<td> <%= CaseConfiguration.getStatusMap().get(((Case)pageContext.findAttribute("cas")).getCaseStatus()) %> </td>
+				<td> 
+					<c:if test="${cas.caseStatus==10 || cas.caseStatus==15}">
+						<a href="selectHanlder.do?UCR=${cas.UCR}">Assign</a> &nbsp;
+					</c:if>
+					<!-- <a href="selectHanlder.do?UCR=${cas.UCR}">Assign</a> &nbsp;
+					<a href="#">Delete</a> -->
 				</td>
 			</tr>
 			</c:forEach>

@@ -1,5 +1,6 @@
 package com.globacomp.ssystem.web.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,6 @@ import org.springframework.stereotype.Controller;
 
 import com.globacomp.ssystem.common.CaseConfiguration;
 import com.globacomp.ssystem.data.model.Case;
-import com.globacomp.ssystem.data.model.User;
 import com.globacomp.ssystem.service.AuthenticationService;
 import com.globacomp.ssystem.service.CaseService;
 import com.globacomp.ssystem.web.WebUser;
@@ -82,12 +82,13 @@ public class CaseController extends AbstractApplicationController<CaseForm, Case
 		return HANDLER_CASES_LIST_VIEW;
 		
 	}
-	public String doAssign(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) {
+	public String doAssign(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws IOException {
 		
 		System.out.println(caseForm.getHandlerId());
 		System.out.println(caseForm.getCas());
 		List<Case> assignedCases= caseService.assign(caseForm.getCasesList(), caseForm.getHandlerId());
 		System.out.println("After Update");
+		response.sendRedirect(request.getContextPath()+"/case/list.do");
 		//System.out.println(c.getHandler().getLogin().getUsername());
 		return CASE_LIST_VIEW;
 	}
@@ -102,6 +103,15 @@ public class CaseController extends AbstractApplicationController<CaseForm, Case
 		return HANDLER_CASES_LIST_VIEW;
 	}
 	
+	public String doRejectAssignment(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws Exception {
+		String UCR = request.getParameter("UCR");
+		if(StringUtils.isBlank(UCR))
+			throw new Exception("UCR not found for request");
+		
+		caseService.rejectAssignment(UCR);
+		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
+		return HANDLER_CASES_LIST_VIEW;
+	}
 	public String doStartProcessing(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws Exception {
 		String UCR = request.getParameter("UCR");
 		if(StringUtils.isBlank(UCR))
@@ -118,6 +128,36 @@ public class CaseController extends AbstractApplicationController<CaseForm, Case
 			throw new Exception("UCR not found for request");
 		
 		caseService.updateCaseStatus(UCR, CaseConfiguration.STATUS.PROCESSING_HOLD_STATUS.getStatus());
+		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
+		return HANDLER_CASES_LIST_VIEW;
+	}
+	
+	public String doCompleteProcessing(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws Exception {
+		String UCR = request.getParameter("UCR");
+		if(StringUtils.isBlank(UCR))
+			throw new Exception("UCR not found for request");
+		
+		caseService.updateCaseStatus(UCR, CaseConfiguration.STATUS.COMPLETION_APPROVAL_PENDING_STATUS.getStatus());
+		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
+		return HANDLER_CASES_LIST_VIEW;
+	}
+	
+	public String doAcceptCompletion(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws Exception {
+		String UCR = request.getParameter("UCR");
+		if(StringUtils.isBlank(UCR))
+			throw new Exception("UCR not found for request");
+		
+		caseService.updateCaseStatus(UCR, CaseConfiguration.STATUS.PROCESSING_COMPLETED_STATUS.getStatus());
+		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
+		return HANDLER_CASES_LIST_VIEW;
+	}
+	
+	public String doRejectCompletion(HttpServletRequest request, HttpServletResponse response, HttpSession session, CaseForm caseForm) throws Exception {
+		String UCR = request.getParameter("UCR");
+		if(StringUtils.isBlank(UCR))
+			throw new Exception("UCR not found for request");
+		
+		caseService.updateCaseStatus(UCR, CaseConfiguration.STATUS.ASSIGNMENT_ACCEPTED_STATUS.getStatus());
 		response.sendRedirect(request.getContextPath()+"/case/handlerCases.do");
 		return HANDLER_CASES_LIST_VIEW;
 	}
