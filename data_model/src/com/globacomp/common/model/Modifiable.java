@@ -1,4 +1,4 @@
-package com.globacomp.ssystem.data;
+package com.globacomp.common.model;
 
 import java.io.Serializable;
 

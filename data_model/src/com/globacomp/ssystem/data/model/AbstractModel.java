@@ -9,7 +9,7 @@ import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.globacomp.ssystem.data.Model;
+import com.globacomp.common.model.Model;
 
 
 @MappedSuperclass
