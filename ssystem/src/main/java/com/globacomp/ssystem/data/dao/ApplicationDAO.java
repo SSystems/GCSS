@@ -3,10 +3,10 @@ package com.globacomp.ssystem.data.dao;
 import java.util.List;
 import java.util.Map;
 
-import com.globacomp.ssystem.data.Createable;
-import com.globacomp.ssystem.data.Model;
-import com.globacomp.ssystem.data.Modifiable;
-import com.globacomp.ssystem.data.Updateable;
+import com.globacomp.common.model.Createable;
+import com.globacomp.common.model.Model;
+import com.globacomp.common.model.Modifiable;
+import com.globacomp.common.model.Updateable;
 
 public interface ApplicationDAO<T extends Model> {
 

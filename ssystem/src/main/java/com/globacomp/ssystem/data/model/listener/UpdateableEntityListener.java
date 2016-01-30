@@ -4,7 +4,7 @@ import java.util.Date;
 
 import javax.persistence.PreUpdate;
 
-import com.globacomp.ssystem.data.Updateable;
+import com.globacomp.common.model.Updateable;
 import com.globacomp.ssystem.web.WebUser;
 
 public class UpdateableEntityListener {

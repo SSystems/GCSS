@@ -23,9 +23,9 @@
 			-->
 			
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:Oracle:thin:@localhost:1521/gcss" />
-            <property name="javax.persistence.jdbc.user" value="system" />
-            <property name="javax.persistence.jdbc.password" value="system2" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:Oracle:thin:@gcss.cs8aa1cilnlt.us-west-2.rds.amazonaws.com:1521/gcss" />
+            <property name="javax.persistence.jdbc.user" value="GCSS" />
+            <property name="javax.persistence.jdbc.password" value="Fright234" />
 			
 			<property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
          	<property name="hibernate.show_sql" value="false"/>

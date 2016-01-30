@@ -14,11 +14,11 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.dao.DataAccessException;
 
+import com.globacomp.common.model.Createable;
+import com.globacomp.common.model.Model;
+import com.globacomp.common.model.Modifiable;
+import com.globacomp.common.model.Updateable;
 import com.globacomp.ssystem.common.Configuration;
-import com.globacomp.ssystem.data.Createable;
-import com.globacomp.ssystem.data.Model;
-import com.globacomp.ssystem.data.Modifiable;
-import com.globacomp.ssystem.data.Updateable;
 import com.globacomp.ssystem.data.dao.ApplicationDAO;
 
 public abstract class AbstractApplicationDAO<T extends Model> implements
