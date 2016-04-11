@@ -15,8 +15,22 @@ drop table roles_master;
 drop table case_files;
 drop table case_master;
 drop table user_master;
+drop table user_dishes;
+drop table user_files;
+drop table address;
 
 
+
+create table user_files (
+id VARCHAR2(64) primary key,
+content blob,
+file_type varchar2(24),
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);
 
 
 create table user_master(
@@ -25,7 +39,29 @@ first_name VARCHAR2(64),
 last_name VARCHAR2(64),
 email VARCHAR2(128),
 gender VARCHAR2(64),
+user_type varchar2(24),
+about_me varchar2(4000),
+cuisines varchar2(1024),
+profile_pic_id varchar2(64) REFERENCES user_files(id),
+w9_form_id varchar2(64) REFERENCES user_files(id),
 active SMALLINT,
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);
+
+create table address(
+id VARCHAR2(64) primary key,
+address_line1 varchar2(128),
+address_line2 varchar2(128),
+country varchar2(64),
+state varchar2(64),
+city varchar2(64),
+zipcode varchar2(10),
+telephone varchar2(20),
+user_id VARCHAR2(64) REFERENCES user_master(id),
 created_by VARCHAR2(128),
 creation_date TIMESTAMP,
 last_update_by VARCHAR2(128),
@@ -82,3 +118,28 @@ last_update_date TIMESTAMP,
 record_status SMALLINT
 );
 
+create table user_verification(
+id VARCHAR2(64) primary key,
+user_id varchar2(64) references user_master(id),
+email_verification_code varchar2(64),
+email_valid_till timestamp,
+is_email_verified SMALLINT,
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);
+
+create table user_dishes(
+id VARCHAR2(64) primary key,
+user_id varchar2(64) references user_master(id),
+title varchar2(64),
+photo_id varchar2(64) references user_files(id),
+description varchar2(512),
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);

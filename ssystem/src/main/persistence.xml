@@ -8,7 +8,7 @@
 	<persistence-unit name="gcss_pu" transaction-type="RESOURCE_LOCAL">
 		<description>Persistance Unit for Globacom sSystem Application</description>
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<mapping-file>orm.xml</mapping-file>
+		<mapping-file>META-INF/orm.xml</mapping-file>
 		<class>com.globacomp.ssystem.data.model.Login</class>
 		<class>com.globacomp.ssystem.data.model.User</class>
 		<class>com.globacomp.ssystem.data.model.Case</class>
@@ -23,9 +23,10 @@
 			-->
 			
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:Oracle:thin:@gcss.cs8aa1cilnlt.us-west-2.rds.amazonaws.com:1521/gcss" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:Oracle:thin:@aarlll2y2qhpqt.crt40hgderka.us-east-1.rds.amazonaws.com:1521/EBDB"/>
+            
             <property name="javax.persistence.jdbc.user" value="GCSS" />
-            <property name="javax.persistence.jdbc.password" value="Fright234" />
+            <property name="javax.persistence.jdbc.password" value="Secure123" />
 			
 			<property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
          	<property name="hibernate.show_sql" value="false"/>

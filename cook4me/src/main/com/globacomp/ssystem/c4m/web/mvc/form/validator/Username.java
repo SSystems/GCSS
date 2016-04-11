@@ -15,7 +15,7 @@ import javax.validation.Payload;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Username {
 
-	String message() default "{Username}";
+	String message() default "Username already exists";
     
     Class<?>[] groups() default {};
       
