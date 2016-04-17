@@ -15,10 +15,4 @@ public class TestController {
 	public String init(HttpServletRequest request, HttpServletResponse response, HttpSession session){
 		return "test/paypalfunctions";
 	}
-	
-	@RequestMapping(value={"/test/home"})
-	public String home(HttpServletRequest request, HttpServletResponse response) {
-		
-		return "test/home";
-	}
 }

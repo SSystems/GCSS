@@ -1,8 +1,7 @@
 package com.globacomp.ssystem.c4m.web.mvc.controller;
 
-import java.io.IOException;
+import java.util.List;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -26,6 +25,7 @@ import com.globacomp.ssystem.c4m.web.WebUser;
 import com.globacomp.ssystem.c4m.web.mvc.form.ChangePasswordForm;
 import com.globacomp.ssystem.c4m.web.mvc.form.LoginForm;
 import com.globacomp.ssystem.data.model.Login;
+import com.globacomp.ssystem.data.model.User;
 
 @Controller
 public class CommonController {
@@ -42,29 +42,10 @@ public class CommonController {
 	@Autowired
 	private ServiceProviderService serviceProviderService;
 	
-	
-	@RequestMapping(value="/")
-	public String init(HttpServletRequest request, HttpServletResponse response, ModelMap model, HttpSession session) {
-		
-		try {
-			request.getRequestDispatcher("/home").forward(request, response);
-		} catch (ServletException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return "homeView";
-	}
-	
 	@RequestMapping(value="/home")
 	public String home(ModelMap model, HttpSession session) {
 		
-		return "homeView";
-	}
-	
-	@RequestMapping(value="/privacy_policy")
-	public String privacyPolicy(ModelMap model, HttpSession session) {
-		
-		return "common/privacy_policy";
+		return null;
 	}
 	@RequestMapping(value="/contactus")
 	public String doContact(HttpServletRequest request, HttpServletResponse response){

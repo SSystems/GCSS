@@ -27,7 +27,7 @@
 			-->
 			
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:Oracle:thin:@aarlll2y2qhpqt.crt40hgderka.us-east-1.rds.amazonaws.com:1521/EBDB" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:Oracle:thin:@aarlll2y2qhpqt.crt40hgderka.us-east-1.rds.amazonaws.com:1521/xe" />
             <!-- <property name="javax.persistence.jdbc.url" value="jdbc:Oracle:thin:@localhost:1521/xe" />  -->
             <property name="javax.persistence.jdbc.user" value="gcss" />
             <!-- <property name="javax.persistence.jdbc.password" value="Secure123" /> -->
