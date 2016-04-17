@@ -7,7 +7,7 @@
 
 <body>
 
-    <header class="navbar-wrapper">
+    <header class="navbar-wrapper"> 
         <nav class="navbar navbar-static-top has-dropshadow light-white" id="nav">
             <div class="container">
                 <div class="navbar-header">
