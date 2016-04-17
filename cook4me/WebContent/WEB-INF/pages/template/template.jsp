@@ -3,23 +3,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
 	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8"/>
-	<meta http-equiv="PRAGMA" content="NO-CACHE"/>
-	<meta http-equiv="CACHE-CONTROL" content="NO-CACHE"/>
-	<meta http-equiv="EXPIRES" content="0"/>
-	<link rel="SHORTCUT ICON" href="<c:url value='/ui/images/favicon.ico'/>"/>
-	<link type="text/css" rel="stylesheet" href="<c:url value='/ui/css/application-stylesheet.css'/>"/>
-	<script type="text/javascript" src="<c:url value='/ui/js/jquery-2.1.1.min.js'/>"></script>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<link rel="stylesheet" href="<c:url value='/ui/css/normalize.css'/>" />
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:500|Dancing+Script:700|Roboto' rel='stylesheet' type='text/css'>
-	<%-- <link rel="stylesheet" href="<c:url value='/ui/css/welcome_screen.css'/>" /> --%>
-	<link rel="shortcut icon" href="<c:url value='/ui/images/favicon.ico'/>" type="image/x-icon" />
-	<script type="text/javascript" src="<c:url value='/ui/js/jquery-1.11.2.min.js'/>"></script>
-	<script type="text/javascript" src="<c:url value='/ui/js/cycle2.js'/>"></script>
-	<script type="text/javascript" src="<c:url value='/ui/js/jquery.leanModal.min.js'/>"></script>
-	<script type="text/javascript" src="<c:url value='/ui/js/jquery.scrollTo.min.js'/>"></script>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link id="favicon" rel="shortcut icon" type="image/x-icon" href="<c:url value='/ui/images/favicon.ico'/>" />
+    
+    <link type="text/css" rel="stylesheet" href="<c:url value='/ui/css/application-stylesheet.css'/>"/>
+	
+	<link href="<c:url value='/ui/css/bootstrap.min.css'/>" rel="stylesheet">
+   
+    <link href="<c:url value='/ui/css/owl.carousel.min.css'/>" rel="stylesheet">
+    <link href="<c:url value='/ui/css/owl.theme.default.min.css'/>" rel="stylesheet">
+    <link href="<c:url value='/ui/css/magnific-popup.min.css'/>" rel="stylesheet">
+    <link href="<c:url value='/ui/css/bootstrap-material-design.min.css'/>" rel="stylesheet">
+    <link href="<c:url value='/ui/css/ripples.min.css'/>" rel="stylesheet">
+    <link href="<c:url value='/ui/css/style.min.css'/>" rel="stylesheet">
+	
+	<script src="<c:url value='/ui/js/jquery.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/modernizr.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/bootstrap.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/owl.carousel.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/jquery.magnific-popup.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/material.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/ripples.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/isotope.pkgd.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/packery-mode.pkgd.js'/>"></script>
+    <script src="<c:url value='/ui/js/prefixfree.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/script.min.js'/>"></script>
+	
 	<title><tiles:getAsString name="title" /></title>
 </head>
 <body>
