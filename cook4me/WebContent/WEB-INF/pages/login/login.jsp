@@ -20,11 +20,13 @@
 					required="true" />
 				<form:errors path="password" cssClass="error" />
 				<br />
+				<input type="submit" value="Login" style="width:10% !important;">
+				<br/>
 				<div class="action_btns">
 					<div>
 						<a href="<c:url value='/serviceprovider/new'/>" class="Register">Register</a>
 					</div>
-					<input type="submit" value="Login">
+					
 				</div>
 			</form:form>
 			<a href="${pageContext.request.contextPath}/forgot_password" class="forgot_password">Forgot password?</a>

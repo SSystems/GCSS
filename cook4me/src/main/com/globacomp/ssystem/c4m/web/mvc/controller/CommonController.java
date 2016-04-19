@@ -1,7 +1,5 @@
 package com.globacomp.ssystem.c4m.web.mvc.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -25,7 +23,6 @@ import com.globacomp.ssystem.c4m.web.WebUser;
 import com.globacomp.ssystem.c4m.web.mvc.form.ChangePasswordForm;
 import com.globacomp.ssystem.c4m.web.mvc.form.LoginForm;
 import com.globacomp.ssystem.data.model.Login;
-import com.globacomp.ssystem.data.model.User;
 
 @Controller
 public class CommonController {

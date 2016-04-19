@@ -10,13 +10,13 @@
 		<section id="contact_details">
 			<h1>Contact Us</h1>
 			<ul>
-				<li><a href="" id="message"><span>&#9993;</span></a> <span>mail</span>
-					<a href="mailto:gantahemanth1995@gmail.com" class="definition">information@chefcomecook.com</a>
+				<li><a href="mailto:information@chefcomecook.com" id="message"><span>&#9993;</span></a> <span>mail</span>
+					<a href="mailto:information@chefcomecook.com" class="definition">information@chefcomecook.com</a>
 				</li>
-				<li><a href=""><span id="facebook" class="icon-facebook"></span></a>
+				<li><a href="https://www.facebook.com/ChefComeCook/" target="_blank"><span id="facebook" class="icon-facebook"></span></a>
 					<span>facebook</span> <a href="#" class="definition">Follow Us</a>
 				</li>
-				<li><a href=""><span class="icon-twitter" id="twitter"></span></a>
+				<li><a href="https://twitter.com/chefcomecook" target="_blank"><span class="icon-twitter" id="twitter"></span></a>
 					<span>twitter</span> <a href="#" class="definition">Tweet Us</a></li>
 			</ul>
 		</section>

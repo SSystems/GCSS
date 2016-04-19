@@ -47,6 +47,7 @@
 	
 	<!--  Common Views -->
 	<definition name="common/*" extends="loginTemplate">
+		<put-attribute name="title" value="ChefComeCook" />
 		<put-attribute name="body" value="/WEB-INF/pages/common/{1}.jsp" />
 	</definition>
 	

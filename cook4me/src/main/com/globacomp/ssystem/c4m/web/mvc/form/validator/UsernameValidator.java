@@ -4,7 +4,6 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.validator.routines.EmailValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.globacomp.ssystem.c4m.data.dao.LoginRepository;
@@ -26,19 +25,11 @@ public class UsernameValidator implements ConstraintValidator<Username, String>{
 		// TODO Auto-generated method stub
 
 		System.out.println(ctx.getDefaultConstraintMessageTemplate());
-		if(StringUtils.isBlank(username)) {
-//			ctx.disableDefaultConstraintViolation();
-//			ctx.buildConstraintViolationWithTemplate("Username cannot be blank");
-			return false;
-		}
+	
+		Login login = null;
 		
-		if(!EmailValidator.getInstance().isValid(username)) {
-//			ctx.disableDefaultConstraintViolation();
-//			ctx.buildConstraintViolationWithTemplate(username + " is not valid email");
-			return false;
-		}
-
-		Login login = loginRepository.findByUsername(username);
+		if(!StringUtils.isBlank(username))
+			login = loginRepository.findByUsername(username);
 		
 		if(login != null) {
 //			ctx.disableDefaultConstraintViolation();

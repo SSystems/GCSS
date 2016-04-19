@@ -8,7 +8,7 @@
 <body>
 	<div id="body-content">
 		
-		<div id="wrap">
+		<div id="wrap" style="margin-top:-110px !important; padding-top:50px !important;">
 			<div id="first_background"></div>
 			<div id="overlay_black"></div> 
 			<section id="register">
@@ -22,36 +22,36 @@
 						<form:option value="0">Individual</form:option>
 						<form:option value="1">Organization</form:option>
 					</form:select>
-					<label>Full Name</label>
-					<form:input path="name" placeHolder="Name" required="true"/> <form:errors path="name" cssStyle="color:red "/>
+					<label>Name</label>
+					<form:input path="name" placeHolder="Full Name" required="true"/> <br/><form:errors path="name" cssStyle="color:red "/>
 					<br />
 					<label>Email Address</label>
-					<form:input path="email" placeHolder="email" required="true" /> <form:errors path="email" cssStyle="color:red "/>
+					<form:input path="email" placeHolder="Email Address" required="true" /> <br/> <form:errors path="email" cssStyle="color:red "/>
 					<br />
 
 					<label>Password</label>
-					<form:password path="password" placeHolder="password" required="true"/> <form:errors path="password" cssStyle="color:red "/>
+					<form:password path="password" placeHolder="Password" required="true"/> <br/> <form:errors path="password" cssStyle="color:red "/>
 					<br />
 					<label>Confirm Password</label>
-					<form:password path="confirmPassword" placeHolder="password" required="true"/> <form:errors path="confirmPassword" cssStyle="color:red "/>
+					<form:password path="confirmPassword" placeHolder="Confirm Password" required="true"/><br/> <form:errors path="confirmPassword" cssStyle="color:red "/>
 					<br />
-					<label>Address Line -- 1</label>
-					<form:input path="address1" placeHolder="address1" required="true" /> <form:errors path="address1" cssStyle="color:red "/>
+					<label>Address</label>
+					<form:input path="address1" placeHolder="Blcok No / Street / Landmark " required="true" /><br/> <form:errors path="address1" cssStyle="color:red "/>
 					<br />
-					<label>Address Line -- 2</label>
-					<form:input path="address2" placeHolder="address2" required="true" /> <form:errors path="address2" cssStyle="color:red "/>
+					<label>City / Town</label>
+					<form:input path="address2" placeHolder="City / Town" required="true" /> <br/><form:errors path="address2" cssStyle="color:red "/>
 					<br />
 					<label>Zip Code</label>
-					<form:input path="pincode" placeHolder="pincode" required="true" /> <form:errors path="pincode" cssStyle="color:red "/>
+					<form:input path="pincode" placeHolder="Zip Code" required="true" /> <br/><form:errors path="pincode" cssStyle="color:red "/>
 					<br />
-					<label>Mobile/Phone Number</label>
-					<form:input path="mobileNumber" placeHolder="mobileNumber" required="true" /> <form:errors path="mobileNumber" cssStyle="color:red "/>
+					<label>Mobile Number</label>
+					<form:input path="mobileNumber" placeHolder="Mobile Number" required="true" /> <br/><form:errors path="mobileNumber" cssStyle="color:red "/>
 					<br />
 					<br />
 					<br />
 					<form:checkbox path="agreeTerms" cssStyle="width:auto !important;"/> 
-				I agree to <a href="#" id="terms">terms and conditions</a> 
-					<br />  <form:errors path="agreeTerms" cssStyle="color:red "/>
+				I agree to <a href="#" id="terms">Terms &amp; Conditions</a> 
+					<br />  <br/> <form:errors path="agreeTerms" cssStyle="color:red "/>
 					<input type="submit" id="register_button" value="Register">
 				</form:form>
 			</section>

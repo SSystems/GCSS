@@ -362,7 +362,6 @@ ul
 {	
 		position:relative;
 		top:50px;
-		left:50px;
 }
 #contact_details > ul > li>span:nth-child(2)
 {
@@ -377,13 +376,11 @@ ul
 	color:#fff;
 	position:relative;
 	top:35px;
-	left:50px;
 }
 #facebook
 {
 	position:relative;
 	top:45px;
-	left:50px;
 }
 
 #address

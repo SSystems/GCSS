@@ -34,12 +34,14 @@
 				<li><span class="icon-checkmark"></span>Affordable prices</li>
 				<li><span class="icon-checkmark"></span>best service</li>
 			</ul>
-			<a href="<c:url value='/serviceprovider/new'/>">Register</a>
-		</article>
-		<article class="slide1">
-			<p>To access all the features we offer Please login</p>
+		
+		<%-- 	<a href="<c:url value='/serviceprovider/new'/>">Register</a>  --%>
 			<a href="<c:url value='/login/'/>" rel="leanModal" id="modal_trigger1">Login</a>
 		</article>
+		<!--  <article class="slide1">
+			<p>To access all the features we offer Please login</p>
+			<a href="<c:url value='/login/'/>" rel="leanModal" id="modal_trigger1">Login</a>
+		</article> -->
 	</div>
 	<div class="example-pager"></div>
 <section>
@@ -54,7 +56,7 @@ $30, and they have great meal! From the entire transaction the way ChefComeCook 
 by taking a small percentage of the entire transaction. </p>
 	</article>
 </section>
-<section>
+<!-- <section>
 	<h3 id="service_provider">Service Providers</h3>
 	<article>
 		<h4>Meghana</h4>
@@ -104,7 +106,7 @@ by taking a small percentage of the entire transaction. </p>
 			<p>Excellent work. Had been a pleasent experience</p>
 		</article>
 	</article>
-</section>
+</section>  --> 
 <footer>
 	<!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark"></a></td></tr></table><!-- PayPal Logo -->
 	<p> &#64; Copyright 2014-2015</p>
