@@ -1,5 +1,6 @@
 package com.globacomp.ssystem.c4m.mail;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
 import javax.annotation.PostConstruct;
@@ -27,7 +28,13 @@ public class ApplicationMailSender {
 	}
 
 	public void send(MimeMessageHelper mimeMessageHelper) throws MessagingException {
-		mimeMessageHelper.getMimeMessage().setFrom("information@chefcomecook.com");
+		//mimeMessageHelper.getMimeMessage().setFrom("");
+		try {
+			mimeMessageHelper.setFrom("information@chefcomecook.com", "ChefComeCook Information");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		mailSender.send(mimeMessageHelper.getMimeMessage());
 	}
 	
