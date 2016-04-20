@@ -27,7 +27,7 @@ public class ApplicationMailSender {
 	}
 
 	public void send(MimeMessageHelper mimeMessageHelper) throws MessagingException {
-		mimeMessageHelper.getMimeMessage().setFrom("gohel_mihir@yahoo.com");
+		mimeMessageHelper.getMimeMessage().setFrom("Chef Come Cook");
 		mailSender.send(mimeMessageHelper.getMimeMessage());
 	}
 	
