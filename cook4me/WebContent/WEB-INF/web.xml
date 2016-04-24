@@ -41,9 +41,9 @@
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>
-	<!--  <welcome-file-list>
+	  <welcome-file-list>
 		<welcome-file>welcome_2.jsp</welcome-file>
-	</welcome-file-list> -->
+	</welcome-file-list>
 	<persistence-unit-ref>
 		<description>Persistence unit for application.</description>
 		<persistence-unit-ref-name>gcss_pu</persistence-unit-ref-name>

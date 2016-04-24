@@ -66,10 +66,79 @@ public class CommonController {
 		
 		return "common/privacy_policy";
 	}
-	@RequestMapping(value="/contactus")
+	@RequestMapping(value="/terms_of_use")
+	public String termsOfuse(ModelMap model, HttpSession session) {
+		
+		return "common/terms-of-use";
+	}
+
+	@RequestMapping(value="/contact_us")
 	public String doContact(HttpServletRequest request, HttpServletResponse response){
 		return "common/contactus";
 	}
+	
+	@RequestMapping(value="/customer-inof")
+	public String customerinof(ModelMap model, HttpSession session){
+		return "common/customer_inof";
+	}
+	@RequestMapping(value="/delivery-pay")
+	public String delivery_pay(ModelMap model, HttpSession session){
+		return "common/delivery_pay";
+	}
+	@RequestMapping(value="/edit-chef-profile")
+	public String editchefprofile(ModelMap model, HttpSession session){
+		return "common/edit_chef_profile";
+	}
+	
+	@RequestMapping(value="/email_verified")
+	public String emailverified(ModelMap model, HttpSession session){
+		return "common/email-verified";
+	}
+	@RequestMapping(value="/hire-shopping-cart")
+	public String hireshoppingcart(ModelMap model, HttpSession session){
+		return "common/hire_shopping_cart";
+	}
+	@RequestMapping(value="/homepage_header")
+	public String homepageheader(ModelMap model, HttpSession session){
+		return "common/homepage-header";
+	}
+	
+	@RequestMapping(value="/index")
+	public String index(ModelMap model, HttpSession session){
+		return "common/index";
+	}
+	
+	@RequestMapping(value="/my-account-chef")
+	public String myaccountchef(ModelMap model, HttpSession session){
+		return "common/my_account_chef";
+	}
+	
+	@RequestMapping(value="/my-account-customer")
+	public String myaccountcustomer(ModelMap model, HttpSession session){
+		return "common/my_account_customer";
+	}
+	
+	@RequestMapping(value="/privacy-policy")
+	public String privacypolicy(ModelMap model, HttpSession session){
+		return "common/privacy_policy";
+	}
+	
+	@RequestMapping(value="/review-and-pay")
+	public String reviewandpay(ModelMap model, HttpSession session){
+		return "common/review_and_pay";
+	}
+	@RequestMapping(value="/shopping-cart")
+	public String shoppingcart(ModelMap model, HttpSession session){
+		return "common/shopping_cart";
+	}
+	@RequestMapping(value="/thank-of-order")
+	public String thankofuse(ModelMap model, HttpSession session){
+		return "common/thank_of_order";
+	}
+	
+	
+	
+	
 	
 	@RequestMapping(value = "/verifyemail", method = RequestMethod.GET)
 	public String verifyEmail(HttpServletRequest request, @RequestParam(value="verification_code", required=true) String verificationCode) throws Exception {

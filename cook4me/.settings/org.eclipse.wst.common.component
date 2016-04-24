@@ -6,7 +6,7 @@
         <dependent-module archiveName="data-model-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/data_model/data_model">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="cook4me"/>
         <property name="java-output-path" value="/cook4me/build/classes"/>
+        <property name="context-root" value="chefcomecook"/>
     </wb-module>
 </project-modules>
