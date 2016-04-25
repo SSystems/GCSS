@@ -77,17 +77,17 @@ public class CommonController {
 		return "common/contactus";
 	}
 	
-	@RequestMapping(value="/customer-inof")
+	@RequestMapping(value="/customer_inof")
 	public String customerinof(ModelMap model, HttpSession session){
-		return "common/customer_inof";
+		return "common/customer-info";
 	}
-	@RequestMapping(value="/delivery-pay")
+	@RequestMapping(value="/delivery_pay")
 	public String delivery_pay(ModelMap model, HttpSession session){
-		return "common/delivery_pay";
+		return "common/delivery-pay";
 	}
-	@RequestMapping(value="/edit-chef-profile")
+	@RequestMapping(value="/edit_chef_profile")
 	public String editchefprofile(ModelMap model, HttpSession session){
-		return "common/edit_chef_profile";
+		return "common/edit-chef-profile";
 	}
 	
 	@RequestMapping(value="/email_verified")

@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/pages/common/customer-info.jsp=UTF-8
 encoding//WebContent/WEB-INF/pages/common/delivery-pay.jsp=UTF-8
 encoding//WebContent/WEB-INF/pages/common/edit-chef-profile.jsp=UTF-8
 encoding//WebContent/WEB-INF/pages/common/home.jsp=UTF-8
