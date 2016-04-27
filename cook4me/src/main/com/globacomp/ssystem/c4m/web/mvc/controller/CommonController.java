@@ -94,9 +94,9 @@ public class CommonController {
 	public String emailverified(ModelMap model, HttpSession session){
 		return "common/email-verified";
 	}
-	@RequestMapping(value="/hire-shopping-cart")
+	@RequestMapping(value="/hire_shopping_cart")
 	public String hireshoppingcart(ModelMap model, HttpSession session){
-		return "common/hire_shopping_cart";
+		return "common/hire-shopping-cart";
 	}
 	@RequestMapping(value="/homepage_header")
 	public String homepageheader(ModelMap model, HttpSession session){
@@ -108,14 +108,14 @@ public class CommonController {
 		return "common/index";
 	}
 	
-	@RequestMapping(value="/my-account-chef")
+	@RequestMapping(value="/my_account_chef")
 	public String myaccountchef(ModelMap model, HttpSession session){
-		return "common/my_account_chef";
+		return "common/my-account-chef";
 	}
 	
-	@RequestMapping(value="/my-account-customer")
+	@RequestMapping(value="/my_account_customer")
 	public String myaccountcustomer(ModelMap model, HttpSession session){
-		return "common/my_account_customer";
+		return "common/my-account-customer";
 	}
 	
 	@RequestMapping(value="/privacy-policy")
@@ -123,17 +123,17 @@ public class CommonController {
 		return "common/privacy_policy";
 	}
 	
-	@RequestMapping(value="/review-and-pay")
+	@RequestMapping(value="/review_and_pay")
 	public String reviewandpay(ModelMap model, HttpSession session){
-		return "common/review_and_pay";
+		return "common/review-and-pay";
 	}
-	@RequestMapping(value="/shopping-cart")
+	@RequestMapping(value="/shopping_cart")
 	public String shoppingcart(ModelMap model, HttpSession session){
-		return "common/shopping_cart";
+		return "common/shopping-cart";
 	}
-	@RequestMapping(value="/thank-of-order")
+	@RequestMapping(value="/thank_you_order")
 	public String thankofuse(ModelMap model, HttpSession session){
-		return "common/thank_of_order";
+		return "common/thank-you-order";
 	}
 	
 	

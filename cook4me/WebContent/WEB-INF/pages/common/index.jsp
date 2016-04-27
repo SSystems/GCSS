@@ -1,9 +1,34 @@
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
- <section class="banner-section">
+ <body class="home-page">
+
+    <header class="navbar-wrapper">
+        
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="cart hide-lg"><a href="javascript:;"><span>0</span></a>
+                    </div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                   
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /.navbar-wrapper -->
+
+    <section class="banner-section">
         <figure>
-            <img src="../cook4me/WebContent/ui/images/banner.jpg" alt="">
+            <img src="<c:url value='/ui/images/banner.jpg'/>" alt="">
             <div class="container">
                 <figcaption>
                     <h3>Don’t be a try hard</h3>
@@ -26,7 +51,7 @@
                     </div>
                     <div class="input-group-btn">
                         <button class="btn">
-                            <img src="../cook4me/WebContent/ui/images/icon-search.png" alt=""> Search
+                            <img src="<c:url value='/ui/images/icon-search.png'/>" alt=""> Search
                         </button>
                     </div>
                 </div>
@@ -46,7 +71,7 @@
                         <figcaption>
                             <p>Lorum ipsum loum donor</p>
                         </figcaption>
-                        <img src="../cook4me/WebContent/ui/images/workflow-01.png" alt="">
+                        <img src="<c:url value='/ui/images/workflow-01.png'/>" alt="">
                     </figure>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 hireCheff">
@@ -55,7 +80,7 @@
                         <figcaption>
                             <p>Lorum ipsum loum donor</p>
                         </figcaption>
-                        <img src=../cook4me/WebContent/ui/images/workflow-02.png" alt="">
+                        <img src="<c:url value='/ui/images/workflow-02.png'/>" alt="">
                     </figure>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 hireCheff">
@@ -64,7 +89,7 @@
                         <figcaption>
                             <p>Lorum ipsum loum donor</p>
                         </figcaption>
-                        <img src=../cook4me/WebContent/ui/images/workflow-03.png" alt="">
+                        <img src="<c:url value='/ui/images/workflow-03.png'/>" alt="">
                     </figure>
                 </div>
             </div>
@@ -102,7 +127,7 @@
 
                     <!-- || FRENCH CUISINE || -->
                     <figure class="french-cuisine item width1 effect-sadie">
-                        <img src="../images/french-cuisine/img-1.jpg" alt="">
+                       <img src="<c:url value='/ui/images/french-cuisine/img-1.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -116,7 +141,7 @@
                         </figcaption>
                     </figure>
                     <figure class="french-cuisine item width2 effect-sadie">
-                        <img src="img/french-cuisine/img-2.jpg" alt="">
+                        <img src="<c:url value='/ui/images/french-cuisine/img-2.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -130,7 +155,7 @@
                         </figcaption>
                     </figure>
                     <figure class="french-cuisine item width1 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/french-cuisine/img-3.jpg" alt="">
+                        <img src="<c:url value='/ui/images/french-cuisine/img-3.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -144,7 +169,7 @@
                         </figcaption>
                     </figure>
                     <figure class="french-cuisine item width3 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/french-cuisine/img-4.jpg" alt="">
+                       <img src="<c:url value='/ui/images/french-cuisine/img-4.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="price">$ 34</h3>
@@ -159,7 +184,7 @@
                         </figcaption>
                     </figure>
                     <figure class="french-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/french-cuisine/img-5.jpg" alt="">
+                        <img src="<c:url value='/ui/images/french-cuisine/img-5.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -173,7 +198,7 @@
                         </figcaption>
                     </figure>
                     <figure class="french-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/french-cuisine/img-6.jpg" alt="">
+                        <img src="<c:url value='/ui/images/french-cuisine/img-6.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -187,7 +212,7 @@
                         </figcaption>
                     </figure>
                     <figure class="french-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/french-cuisine/img-7.jpg" alt="">
+                        <img src="<c:url value='/ui/images/french-cuisine/img-7.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -203,7 +228,7 @@
 
                     <!-- || FRENCH CUISINE || -->
                     <figure class="fusion-cuisine item width1 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/fusion-cuisine/img-1.jpg" alt="">
+                        <img src="<c:url value='/ui/images/fusion-cuisine/img-1.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -217,7 +242,7 @@
                         </figcaption>
                     </figure>
                     <figure class="fusion-cuisine item width2 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/fusion-cuisine/img-2.jpg" alt="">
+                        <img src="<c:url value='/ui/images/fusion-cuisine/img-2.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -231,7 +256,7 @@
                         </figcaption>
                     </figure>
                     <figure class="fusion-cuisine item width1 effect-sadie">
-                        <img src="../cook4me/WebContent/images/img-3.jpg" alt="">
+                        <img src="<c:url value='/ui/images/fusion-cuisine/img-3.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -245,7 +270,7 @@
                         </figcaption>
                     </figure>
                     <figure class="fusion-cuisine item width3 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/fusion-cuisine/img-4.jpg" alt="">
+                        <img src="<c:url value='/ui/images/fusion-cuisine/img-4.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="price">$ 34</h3>
@@ -260,7 +285,7 @@
                         </figcaption>
                     </figure>
                     <figure class="fusion-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/fusion-cuisine/img-5.jpg" alt="">
+                        <img src="<c:url value='/ui/images/fusion-cuisine/img-5.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -274,7 +299,7 @@
                         </figcaption>
                     </figure>
                     <figure class="fusion-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/fusion-cuisine/img-6.jpg" alt="">
+                        <img src="<c:url value='/ui/images/fusion-cuisine/img-6.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -288,7 +313,7 @@
                         </figcaption>
                     </figure>
                     <figure class="fusion-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/fusion-cuisine/img-7.jpg" alt="">
+                        <img src="<c:url value='/ui/images/fusion-cuisine/img-7.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -304,7 +329,7 @@
 
                     <!-- || HAUTE CUISINE || -->
                     <figure class="haute-cuisine item width1 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/haute-cuisine/img-1.jpg" alt="">
+                        <img src="<c:url value='/ui/images/haute-cuisine/img-1.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -318,7 +343,7 @@
                         </figcaption>
                     </figure>
                     <figure class="haute-cuisine item width2 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/haute-cuisine/img-2.jpg" alt="">
+                        <img src="<c:url value='/ui/images/haute-cuisine/img-2.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -332,7 +357,7 @@
                         </figcaption>
                     </figure>
                     <figure class="haute-cuisine item width1 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/haute-cuisine/img-3.jpg" alt="">
+                        <img src="<c:url value='/ui/images/haute-cuisine/img-3.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="dishes-name"> <span class="price">$ 34</span> Roasted <br> Chicken Cutlet</h3>
@@ -346,7 +371,7 @@
                         </figcaption>
                     </figure>
                     <figure class="haute-cuisine item width3 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/haute-cuisine/img-4.jpg" alt="">
+                        <img src="<c:url value='/ui/images/haute-cuisine/img-4.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="price">$ 34</h3>
@@ -361,7 +386,7 @@
                         </figcaption>
                     </figure>
                     <figure class="haute-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/haute-cuisine/img-5.jpg" alt="">
+                        <img src="<c:url value='/ui/images/haute-cuisine/img-5.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="price">$ 34</h3>
@@ -376,7 +401,7 @@
                         </figcaption>
                     </figure>
                     <figure class="haute-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/haute-cuisine/img-6.jpg" alt="">
+                        <img src="<c:url value='/ui/images/haute-cuisine/img-6.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="price">$ 34</h3>
@@ -391,7 +416,7 @@
                         </figcaption>
                     </figure>
                     <figure class="haute-cuisine item width4 effect-sadie">
-                        <img src="../cook4me/WebContent/ui/images/haute-cuisine/img-7.jpg" alt="">
+                        <img src="<c:url value='/ui/images/haute-cuisine/img-7.jpg'/>" alt="">
                         <figcaption>
                             <div class="caption-content">
                                 <h3 class="price">$ 34</h3>
@@ -431,7 +456,7 @@
                         </div>
                         <div class="col-lg-6 text-center">
                             <figure>
-                                <img src="../cook4me/WebContent/ui/images/img-review.jpg" alt="">
+                                <img src="<c:url value='/ui/images/img-review.jpg'/>" alt="">
                                 <figcaption>
                                     <h5>Charles</h5>
                                     <p>Ipsum elit non dictum</p>
@@ -449,7 +474,7 @@
                         </div>
                         <div class="col-lg-6 text-center">
                             <figure>
-                                <img src="../cook4me/WebContent/ui/images/img-review.jpg" alt="">
+                                <img src="<c:url value='/ui/images/img-review.jpg'/>" alt="">
                                 <figcaption>
                                     <h5>Charles</h5>
                                     <p>Ipsum elit non dictum</p>
@@ -467,7 +492,7 @@
                         </div>
                         <div class="col-lg-6 text-center">
                             <figure>
-                                <img src="../cook4me/WebContent/ui/images/img-review.jpg" alt="">
+                                <img src="<c:url value='/ui/images/img-review.jpg'/>" alt="">
                                 <figcaption>
                                     <h5>Charles</h5>
                                     <p>Ipsum elit non dictum</p>
@@ -485,7 +510,7 @@
                         </div>
                         <div class="col-lg-6 text-center">
                             <figure>
-                                <img src="../cook4me/WebContent/ui/images/img-review.jpg" alt="">
+                                <img src="<c:url value='/ui/images/img-review.jpg'/>" alt="">
                                 <figcaption>
                                     <h5>Charles</h5>
                                     <p>Ipsum elit non dictum</p>
@@ -503,7 +528,7 @@
                         </div>
                         <div class="col-lg-6 text-center">
                             <figure>
-                                <img src="../cook4me/WebContent/ui/images/img-review.jpg" alt="">
+                                <img src="<c:url value='/ui/images/img-review.jpg'/>" alt="">
                                 <figcaption>
                                     <h5>Charles</h5>
                                     <p>Ipsum elit non dictum</p>
@@ -516,6 +541,5 @@
         </div>
     </section>
     <!-- /.reviews-section -->
-
 </body>
 </html>
