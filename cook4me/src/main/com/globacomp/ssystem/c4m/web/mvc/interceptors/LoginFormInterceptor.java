@@ -33,6 +33,9 @@ public class LoginFormInterceptor extends HandlerInterceptorAdapter {
 		}
 		else
 			System.out.println("Map Empty");
+		
+		String referer = request.getHeader("Referer");
+		System.out.println("Referer:"+referer);
 		return super.preHandle(request, response, handler);
 	}
 	

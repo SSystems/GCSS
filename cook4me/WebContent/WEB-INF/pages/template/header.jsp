@@ -49,16 +49,18 @@
         </div>
         <h2>Login</h2>
         <div class="row formFiledsBlock">
-            <div class="form-group label-floating">
-                <label class="control-label" for="focusedInput1">E-Mail</label>
-                <input class="form-control" id="focusedInput1" type="text">
-            </div>
-            <div class="form-group label-floating">
-                <label class="control-label" for="focusedInput1">Password</label>
-                <input class="form-control" id="password" type="password">
-            </div>
-            <a class="popup-modal link decoration-line" href="#forgot-popup" data-effect="mfp-zoom-in">Forgot Password?</a>
-            <button type="button" class="btn">Log In</button>
+        	<form action="${pageContext.request.contextPath}/login/authenticate" method="post">
+	            <div class="form-group label-floating">
+	                <label class="control-label" for="focusedInput1">E-Mail</label>
+	                <input class="form-control" id="focusedInput1" name="username" type="text">
+	            </div>
+	            <div class="form-group label-floating">
+	                <label class="control-label" for="focusedInput1">Password</label>
+	                <input class="form-control" id="password" name="password" type="password">
+	            </div>
+	            <a class="popup-modal link decoration-line" href="#forgot-popup" data-effect="mfp-zoom-in">Forgot Password?</a>
+	            <button type="submit" class="btn">Log In</button>
+	            </form>
             <div class="divider">Or</div>
             <button type="button" class="btn facebook-btn"><img src="<c:url value='/ui/images/fb.png'/>" alt="FaceBook">Log in with Facebook</button>
             <p>New to Chef Come Cook? <a class="popup-modal decoration-line" href="#signup-popup" data-effect="mfp-zoom-in"> Sign up!</a>

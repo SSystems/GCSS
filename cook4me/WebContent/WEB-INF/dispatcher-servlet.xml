@@ -26,13 +26,13 @@
 	<!-- UI resources exclusions from servlet mapping -->
 	<mvc:resources location="/ui/" mapping="/ui/**"/>
 	
-	<mvc:interceptors>
+	<!-- <mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**"  />
 			<mvc:exclude-mapping path="/ui/**" />
 			<bean class="com.globacomp.ssystem.c4m.web.mvc.interceptors.LoginFormInterceptor" />
 		</mvc:interceptor>
-	</mvc:interceptors>
+	</mvc:interceptors> -->
 	
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" />
