@@ -38,7 +38,7 @@
                         <li><a class="popup-modal" href="#profile-popup" data-effect="mfp-zoom-in"> <%= user.getFirstName() %> </a>
                         </li>
                         <%} else {%>
-                        <li><a class="popup-modal" href="#login-popup" data-effect="mfp-zoom-in">Login</a>
+                        <li><a class="" href="${pageContext.request.contextPath}/login">Login</a>
                         </li>
                         <li class="spl-btn"><a href="javascript:;">Become a Chef</a>
                         </li>

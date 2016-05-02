@@ -31,7 +31,7 @@
                         </li>
                         <li class="cart"><a href="javascript:;"><span>0</span></a>
                         </li>
-                        <li><a class="popup-modal" href="#login-popup" data-effect="mfp-zoom-in">Login</a>
+                        <li><a class="" href="${pageContext.request.contextPath}/login" >Login</a>
                         </li>
                         <li class="spl-btn"><a href="javascript:;">Become a Chef</a>
                         </li>

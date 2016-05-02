@@ -166,24 +166,27 @@ public class CommonController {
 		return "common/change_password";
 	}
 	
-	@RequestMapping(value="/forgot_password",method = RequestMethod.GET)
-	public String forgotPassword(@ModelAttribute LoginForm loginForm, @RequestParam(value="username", required=false) String username, ModelMap model) {
+	@RequestMapping(value="/forgot_password",method = RequestMethod.POST)
+	public String forgotPassword(@RequestParam(value="username", required=false) String username, @ModelAttribute LoginForm loginForm, ModelMap model) {
 		
-		if(StringUtils.isBlank(username))
-			return "common/forgot_password";
+		if(StringUtils.isBlank(username)) {
+			model.put("errorMessage", "Please provide Username");
+			return "login/login";
+		}
+			
 		
 		Login login = authenticationService.findByUsername(username);
 		
 		if(login == null) {
 			model.addAttribute("errorMessage", "Invalid Username");
-			return "common/forgot_password";
+			return "login/login";
 		}
 		
 		emailTemplateService.sendPassword(login);
 		
 		model.addAttribute("message", "Password has been sent to your registered email id. Please check your email");
 		
-		return "common/forgot_password";
+		return "forward:/login";
 	}
 	
 	
