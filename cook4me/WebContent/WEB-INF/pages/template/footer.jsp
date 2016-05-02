@@ -1,9 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<body>
 
     <footer class="footer-section">
         <div class="container">
@@ -60,7 +56,3 @@
             <p class="text-center">2016 &copy; Chefcomecook, Inc.</p>
         </div>
     </footer>
-   
-</body>
-
-</html>

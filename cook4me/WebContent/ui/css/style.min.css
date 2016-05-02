@@ -330,14 +330,19 @@ body.has-fixedheader #nav.affix-top {
 }
 
 .banner-section figure>img {
-	position: absolute;
+   /**	position: absolute; **/
 	top: 0;
 	left: 0;
 	min-width: 100%;
 	height: 100%;
-	display: block
+	display: block;
+	max-width:100%;
 }
-
+.bannerDesc{
+	position: absolute;
+    top: 50%;
+    right: 50px;
+}
 .banner-section figure {
 	position: relative;
 	width: 100%;
@@ -351,7 +356,7 @@ body.has-fixedheader #nav.affix-top {
 }
 
 .banner-section figcaption {
-	position: absolute;
+   /** position: absolute; **/
 	right: 0;
 	top: 50%;
 	z-index: 10;

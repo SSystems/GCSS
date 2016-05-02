@@ -77,7 +77,7 @@ public class CommonController {
 		return "common/contactus";
 	}
 	
-	@RequestMapping(value="/customer_inof")
+	@RequestMapping(value="/customer_info")
 	public String customerinof(ModelMap model, HttpSession session){
 		return "common/customer-info";
 	}

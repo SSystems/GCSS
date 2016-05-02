@@ -1,35 +1,10 @@
- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html lang="en">
- <body class="home-page">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-    <header class="navbar-wrapper">
-        
-            <div class="container">
-                <div class="navbar-header">
-                    <div class="cart hide-lg"><a href="javascript:;"><span>0</span></a>
-                    </div>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    
-                    </a>
-                </div>
 
-                <div id="navbar" class="navbar-collapse collapse">
-                   
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- /.navbar-wrapper -->
-
-    <section class="banner-section">
+       <section class="banner-section">
         <figure>
             <img src="<c:url value='/ui/images/banner.jpg'/>" alt="">
-            <div class="container">
+            <div class="bannerDesc">
                 <figcaption>
                     <h3>Don’t be a try hard</h3>
                     <h4>Lorem ipsum dolor sit amet,
@@ -37,8 +12,8 @@
                     <br>venenatis faucibus</h4>
                 </figcaption>
             </div>
+            
             <div class="banner-searchbar">
-
                 <div class="input-group">
                     <div class="form-group search-control">
                         <input type="Search" placeholder="Search for menus or a chef" class="form-control" />
@@ -541,5 +516,3 @@
         </div>
     </section>
     <!-- /.reviews-section -->
-</body>
-</html>

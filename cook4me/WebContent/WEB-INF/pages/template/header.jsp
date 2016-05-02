@@ -2,13 +2,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
 
     <header class="navbar-wrapper"> 
-        <nav class="navbar navbar-static-top has-dropshadow light-white" id="nav">
+        <nav class="navbar" data-spy="affix" data-offset-top="400"  id="nav">
+
             <div class="container">
                 <div class="navbar-header">
                     <div class="cart hide-lg"><a href="javascript:;"><span>0</span></a>
@@ -144,7 +142,3 @@
         </div>
         <!-- /.alert-check-mail -->
     </div>
-
-</body>
-
-</html>

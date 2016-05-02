@@ -20,9 +20,11 @@
     <link href="<c:url value='/ui/css/owl.theme.default.min.css'/>" rel="stylesheet">
     <link href="<c:url value='/ui/css/magnific-popup.min.css'/>" rel="stylesheet">
     <link href="<c:url value='/ui/css/bootstrap-material-design.min.css'/>" rel="stylesheet">
+    <link href="<c:url value='/ui/css/bootstrap-tagsinput.css'/>" rel="stylesheet">
     <link href="<c:url value='/ui/css/ripples.min.css'/>" rel="stylesheet">
     <link href="<c:url value='/ui/css/style.min.css'/>" rel="stylesheet">
-	
+
+
 	<script src="<c:url value='/ui/js/jquery.min.js'/>"></script>
     <script src="<c:url value='/ui/js/modernizr.min.js'/>"></script>
     <script src="<c:url value='/ui/js/bootstrap.min.js'/>"></script>
@@ -33,6 +35,8 @@
     <script src="<c:url value='/ui/js/isotope.pkgd.min.js'/>"></script>
     <script src="<c:url value='/ui/js/packery-mode.pkgd.js'/>"></script>
     <script src="<c:url value='/ui/js/prefixfree.min.js'/>"></script>
+    <script src="<c:url value='/ui/js/star-rating.js'/>"></script>
+    <script src="<c:url value='/ui/js/bootstrap-tagsinput.min.js'/>"></script>
     <script src="<c:url value='/ui/js/script.min.js'/>"></script>
 	
 	<title><tiles:getAsString name="title" /></title>
