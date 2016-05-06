@@ -10,7 +10,7 @@
 				modelAttribute="login">
 				<label class="error" style="color:red;"> ${errorMessage}</label>
 					
-				<label for="user_name">User Name</label>
+				<label for="user_name">Email</label>
 				<form:input path="username" placeholder="E-Mail ID" autofocus="true"
 					required="true" />
 				<form:errors path="username" cssClass="error" />

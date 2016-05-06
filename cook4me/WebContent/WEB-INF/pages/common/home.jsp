@@ -25,8 +25,7 @@
 	data-cycle-pager=".example-pager"
 	data-cycle-slides="> article"
     >
-		<div class="cycle-prev"></div>
-		<div class="cycle-next"></div>
+		
 		<article class="slide2" id="slide">
 			<p>Chef Come Cook Offers</p>
 			<ul>

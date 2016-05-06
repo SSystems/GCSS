@@ -543,6 +543,10 @@ h2
 	{
 		color:#ed1245;
 	}
+	#tablet > a:active
+	{
+		color:#ed1245;
+	}
 	.image
 	{
 		background:url("../images/logo4.jpg");
