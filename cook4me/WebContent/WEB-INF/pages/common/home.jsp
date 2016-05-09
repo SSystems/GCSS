@@ -41,7 +41,7 @@
 	<section class="banner-section">
 		<figure>
 			<img src="<c:url value='/ui/images/banner.jpg'/>" alt="">
-			<div class="container">
+			<div class="BannerDesc">
 				<figcaption>
 					<h3>Don’t be a try hard</h3>
 					<h4>

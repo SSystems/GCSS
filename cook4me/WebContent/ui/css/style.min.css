@@ -393,7 +393,7 @@ body.has-fixedheader #nav.affix-top {
 
 .policy-banner figure {
 	height: 260px;
-	background: url(../images/bg_policy.jpg) center center no-repeat;
+	background: url(../images/terms.jpg) center center no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -583,15 +583,16 @@ body.has-fixedheader #nav.affix-top {
 h4, h5 {
 	color: #372314;
 	font-family: 'Gotham-medium';
-	margin-bottom: 25px
+	margin-bottom: 25px;
 }
 
 h4 {
-	font-size: 20px
+	font-size: 20px;
+	margin-bottom: 45px;
 }
 
 h5 {
-	font-size: 18px
+	font-size: 18px;
 }
 
 .rating-star .clear-rating, .rating-star .caption {
@@ -2462,7 +2463,7 @@ hr {
 
 .profile-banner figure {
 	height: 400px;
-	background: url(../images/bg-chef.jpg) center center no-repeat;
+	background: url(../images/cookbannerprofile.jpg) center center no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -3048,7 +3049,7 @@ input[readonly] {
 }
 
 .profile-avatar {
-	background: url(../images/chef-1.jpg) no-repeat;
+	background: url(../images/profile-dp_2.jpg) no-repeat;
 	width: 201px;
 	height: 203px;
 	display: inline-block;
@@ -6804,4 +6805,10 @@ table {
 
 .edit-user .timeline .panel .panel-heading .panel-title {
 	margin-bottom: 0
+}
+.BannerDesc{
+ 	position: absolute;
+    top: 50%;
+    right: 5%;
+}
 }

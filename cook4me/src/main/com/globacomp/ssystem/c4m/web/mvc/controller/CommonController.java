@@ -112,7 +112,10 @@ public class CommonController {
 	public String myaccountchef(ModelMap model, HttpSession session){
 		return "common/my-account-chef";
 	}
-	
+	@RequestMapping(value="/user_profile")
+	public String userprofile(ModelMap model, HttpSession session){
+		return "common/user-profile";
+	}
 	@RequestMapping(value="/my_account_customer")
 	public String myaccountcustomer(ModelMap model, HttpSession session){
 		return "common/my-account-customer";

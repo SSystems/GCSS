@@ -44,7 +44,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 chef-profile-details">
                     <div class="chef-user-profile text-center">
                         <figure>
-                            <img src="<c:url value='/ui/images/profile-dp.png'/>" alt="Profile">
+                            <img src="<c:url value='/ui/images/profile-dp.jpg'/>" alt="Profile">
                         </figure>
                         <figcaption>
                             <h4 class="head-title">Jeniffer Orange</h4>

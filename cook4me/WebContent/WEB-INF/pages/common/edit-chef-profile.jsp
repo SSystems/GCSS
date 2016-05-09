@@ -221,10 +221,11 @@
                                 <div class="file-upload">
                                 <span class="file-input btn btn-primary btn-file"><img class="camera-icon" src="<c:url value='/ui/images/add.svg'/>" alt="add">  <p>Add Your Dishes</p><input type="file" multiple></span></div>
                             </li>
-                            <li><img src="<c:url value='/ui/images/dish-2.jpg'/>" alt="Dishes">
+                            <li><img src="<c:url value='/ui/images/dish-21.jpg'/>" alt="Dishes">
                             </li>
-                            <li><img src="<c:url value='/ui/images/dish-3.jpg'/>" alt="Dishes">
+                            <li><img src="<c:url value='/ui/images/dish-31.jpg'/>" alt="Dishes">
                             </li>
+                             
                         </ul>
                     </div>
                 </div>

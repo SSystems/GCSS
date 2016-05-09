@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <section class="banner-section static-banner policy-banner">
+          
             <figure>
-                <!-- <img src="img/contactBg.jpg" alt=""> -->
+                <!--   <img src="<c:url value='/ui/images/terms.jpg'/>" alt=""> -->
             </figure>
+             
         </section>
         <!-- /.banner-section -->
 
