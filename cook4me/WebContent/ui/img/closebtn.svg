@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.75" height="7.75" viewBox="0 0 7.75 7.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #96272c;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="closebtn_normal_copy_3" data-name="closebtn normal copy 3" class="cls-1" d="M1230.87,666.086l-0.45-.448-3.42,3.414-3.42-3.414-0.45.448,3.42,3.414-3.42,3.414,0.45,0.447,3.42-3.413,3.42,3.413,0.45-.447-3.42-3.414Z" transform="translate(-1223.13 -665.625)"/>
+</svg>
