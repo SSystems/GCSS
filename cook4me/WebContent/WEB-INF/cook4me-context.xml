@@ -16,27 +16,39 @@
 		http://www.springframework.org/schema/jee/spring-jee.xsd
 		http://www.springframework.org/schema/aop 
 		http://www.springframework.org/schema/aop/spring-aop.xsd">
-	
-	
+
+
 	<aop:aspectj-autoproxy />
 
 	<context:annotation-config />
 
 	<context:component-scan base-package="com.globacomp.ssystem.c4m" />
-	
+
 	<!-- <import resource="cook4me-security.xml" /> -->
-	
 
-	 <tx:annotation-driven transaction-manager="transactionManager" />
 
-	
-	 <bean id="transactionManager"
-		class="org.springframework.orm.jpa.JpaTransactionManager">
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
-	</bean> 
+	</bean>
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml" />
 	</bean>
- 
+
+	<!-- PayPal Bean -->
+	<bean name="payPalInterfaceService"
+		class="urn.ebay.api.PayPalAPI.PayPalAPIInterfaceServiceService">
+		<constructor-arg name="configurationMap">
+			<map key-type="java.lang.String">
+				<entry key="mode" value="live" />
+				<entry key="acct1.UserName" value="tgandi1_api1.yahoo.com" />
+				<entry key="acct1.Password" value="8EJ626C7K3XFE9LH" />
+				<entry key="acct1.Signature" value="APl4ixwoDeRpMKagEPg-mRmr2-rTA21kwHbb.xnsF5y.wgWqgCvSmcJE" />
+			</map>
+		</constructor-arg>
+	</bean>
+	
 </beans>

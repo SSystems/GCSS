@@ -32,7 +32,6 @@ last_update_date TIMESTAMP,
 record_status SMALLINT
 );
 
-
 create table user_master(
 id VARCHAR2(64) primary key,
 first_name VARCHAR2(64),
@@ -137,6 +136,68 @@ user_id varchar2(64) references user_master(id),
 title varchar2(64),
 photo_id varchar2(64) references user_files(id),
 description varchar2(512),
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);
+
+create table cart_master (
+id VARCHAR2(64) primary key,
+user_id varchar2(64) references user_master(id),
+cart_status smallint,
+total_cart_price numeric(10,2),
+discount_percentage float,
+discount_amount numeric(10,2),
+net_price numeric(10,2),
+net_adjustment_amount numeric(10,2),
+final_price numeric(10,2),
+coupon_code varchar2(10),
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);
+
+create table cart_line_item (
+id VARCHAR2(64) primary key,
+CART_ID varchar2(64) references cart_master(id),
+PRODUCT_ID varchar2(64) references product_master(id),
+quantity NUMBER(9),
+extended_price numeric(10,2),
+discount_percentage float,
+discount_amount numeric(10,2),
+net_price numeric(10,2),
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);
+
+create table product_master (
+id VARCHAR2(64) primary key,
+name varchar2(128),
+code varchar2(32),
+description varchar2(4000),
+USER_ID varchar2(63) references user_master(id),
+price numeric(10,2),
+quantity smallint,
+created_by VARCHAR2(128),
+creation_date TIMESTAMP,
+last_update_by VARCHAR2(128),
+last_update_date TIMESTAMP,
+record_status SMALLINT
+);
+
+create table product_image (
+id VARCHAR2(64) primary key,
+content blob,
+file_type varchar2(24),
+product_id varchar2(64) references product_master(id),
+sequence smallint,
 created_by VARCHAR2(128),
 creation_date TIMESTAMP,
 last_update_by VARCHAR2(128),

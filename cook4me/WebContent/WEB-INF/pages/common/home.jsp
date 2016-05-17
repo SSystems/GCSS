@@ -4,7 +4,41 @@
 <html lang="en">
 
 <body class="home-page">
-	
+	<script>
+    $(document).ready(function(){
+      $(".addToCart").click(function(e){
+    	e.preventDefault();
+    	var productId = $(this).attr("data-product-id");
+    	var count;
+        $.ajax({
+        		type: "POST",
+                url: "${pageContext.request.contextPath}/cart/add_to_cart",
+                headers: { 
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                },
+              	data: JSON.stringify({productId:productId}),
+                success:function(result){
+          			count = result.totalCartLineItem;
+          			alert($('#cartLineItemCount').text());
+          			$('#cartLineItemCount').html(count);
+          			alert(count);
+        		},
+        		error:function(jqXHR, textStatus, errorThrown ){
+        			alert(data);
+       				alert(jqXHR.responseText);
+        			alert(textStatus);
+        			alert(errorThrown);
+        		}
+       		});
+        alert(count);
+      });
+      function addToCart(userId, productId) {
+    	  alert('button clicked');
+      }
+    });
+    </script>
+    
 	 <header class="navbar-wrapper">
         <nav class="navbar navbar-static-top" id="nav">
             <div class="container">
@@ -27,7 +61,7 @@
                         </li>
                         <li><a href="#ourmenu">Our Menu</a>
                         </li>
-                        <li class="cart"><a href="shopping-cart.html"><span>0</span></a>
+                        <li class="cart"><a href="shopping-cart.html"><span id="cartLineItemCount" >0</span></a>
                         </li>
                         <%
 						WebUser user = (WebUser) session.getAttribute(WebUser.SESSION_ATTRIBUTE);
@@ -35,7 +69,7 @@
 						%>
 						<li>&nbsp;
                         </li>
-                        <li><a class="popup-modal" href="#profile-popup" data-effect="mfp-zoom-in"> <%= user.getFirstName() %> </a>
+                        <li><a id="session-user" class="popup-modal" href="#profile-popup" data-effect="mfp-zoom-in" data-user-id="<%=user.getId()%>"> <%= user.getFirstName() %> </a>
                         </li>
                         <%} else {%>
                         <li><a class="" href="${pageContext.request.contextPath}/login">Login</a>
@@ -175,7 +209,7 @@
 								<p>Lorum ipsum to the beautifully filled pasta</p>
 								<div class="caption-btn">
 									<a href="javascript:;" class="btn">Hire Chef</a> <a
-										href="javascript:;" class="btn">Add to cart</a>
+										href="javascript:;" class="btn addToCart" data-product-id="11">Add to cart</a>
 								</div>
 							</div>
 							<!-- /.caption-content -->
@@ -186,13 +220,13 @@
 						<figcaption>
 							<div class="caption-content">
 								<h3 class="dishes-name">
-									<span class="price">$ 34</span> Roasted <br> Chicken
+									<span class="price">$ 35</span> Roasted <br> Chicken
 									Cutlet
 								</h3>
 								<p>Lorum ipsum to the beautifully filled pasta</p>
 								<div class="caption-btn">
 									<a href="javascript:;" class="btn">Hire Chef</a> <a
-										href="javascript:;" class="btn">Add to cart</a>
+										href="" onclick="addToCart(null,null)" class="btn">Add to cart</a>
 								</div>
 							</div>
 							<!-- /.caption-content -->

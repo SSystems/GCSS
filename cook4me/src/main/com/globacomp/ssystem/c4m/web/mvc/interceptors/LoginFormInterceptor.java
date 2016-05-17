@@ -1,5 +1,6 @@
 package com.globacomp.ssystem.c4m.web.mvc.interceptors;
 
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -36,6 +37,15 @@ public class LoginFormInterceptor extends HandlerInterceptorAdapter {
 		
 		String referer = request.getHeader("Referer");
 		System.out.println("Referer:"+referer);
+		
+		Enumeration<String> headers = request.getHeaderNames(); 
+		String header = null;
+		
+		while (headers.hasMoreElements()){
+			header = headers.nextElement();
+			System.out.println("Header Name:"+header+ "__ Value:"+request.getHeader(header));
+		}
+		
 		return super.preHandle(request, response, handler);
 	}
 	
