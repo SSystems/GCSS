@@ -14,7 +14,7 @@
 			<p>1. You will need to start by registering a account as a chef
 				on the Chef Come Cook website. Shortly after you will be contacted
 				by email.</p>
-			<p>2. Complete the 1099-MISC form that is attached to the email,
+			<p>2. Complete the W-9 form that is attached to the email,
 				then upload it through the chef portal.</p>
 
 			<p>3. Just wait for an approval email from us. This can take

@@ -42,6 +42,7 @@ html,body
 .icon-checkmark:before {
 	content: "\ea10";
 	margin-right:15px;
+	
 }
 #login:hover .icon-arrow-down:before
 {
@@ -147,6 +148,13 @@ header
 	padding-bottom:15px;
 }
 form
+{
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+}
+imgdiv1
 {
 	width:90%;
 	margin-left:auto;
@@ -511,7 +519,7 @@ footer
 	}
 	.image
 	{
-		background:url("../images/logo4.jpg");
+		background:url("../images/logo.png");
 		display:inline-block;
 		width:30%;
 		max-width:191px;
@@ -601,27 +609,28 @@ footer
 		font-weight:bold;
 		color:#1c1b1a;
 	}
+	
 	.slide1 > a , .slide2 > a 
 	{
 		top:40%;
-		left:43%;
-		width:272px;
+		left:50%;
+		width:100px;
 		border-radius:5px;
-		height:64px;
-		line-height::64px;
+		height:45px;
+		line-height::50px;
 		background:#c10330;
 		color:white;
-		font-size:20px;
-		padding-top:5px;
+		font-size:18px;
+		padding-top:2px;
 	}
 	
 	.slide2 > a 
 	{
-		top:60%;
-		left:37%;
+		top:75%;
+		left:45%;
 		display:inline-block;
-		padding-top:5px;
-		padding-left:5px;
+		padding-top:0px;
+		padding-left:2px;
 	}
 	
 	.slide2:before 
@@ -641,7 +650,7 @@ footer
 	{
 		font-size:24px;
 		top:10%;
-		left:35%;
+		left:40%;
 		font-weight:bold;
 		color:#c10330;
 		display:inline-block;
@@ -659,8 +668,15 @@ footer
 		padding:10px;
 		color:#1c1b1a;
 		font-weight:bold;
-		height:48px;
-		font-size:20px;
+		height:30px;
+		font-size:15px;
+	}
+	.slide2 > imgdiv
+	{
+	width: 25px;
+	height: 52px;
+	background-color: "red";
+	
 	}
 	
 }
