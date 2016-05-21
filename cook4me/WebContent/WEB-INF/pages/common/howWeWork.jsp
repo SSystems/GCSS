@@ -28,15 +28,16 @@
 			<br/> <br/>
 			<section>
 				<h3>Delivery Methods</h3>
-				<div style="margin: 0 100px;">
-					<div style="width: 25%; display: inline-block;"><img src="<c:url value='/ui/images/chefcook-active.svg'/>"></div>
-					<div style="width: 25%; display: inline-block;"><img src="<c:url value='/ui/images/deliveryman.svg'/>" ></div>
-					<div style="width: 25%; display: inline-block;">	<img src="<c:url value='/ui/images/deliveryatchef-active.svg'/>" ></div>
-					<div style="width: 25%; display: inline-block;"> <span>At Home Service</span></div>
-					<div style="width: 25%; display: inline-block;"><span>Home Delivery</span></div>
-					<div style="width: 25%; display: inline-block;"><span>Take Away Service</span></div>
+				
+				<div>
+					<div style="display: inline-block;"><img src="<c:url value='/ui/images/hire_chef.png'/>"></div>
+					<div style="display: inline-block; width: 10px;"></div>
+					<div style="display: inline-block;"><img src="<c:url value='/ui/images/chef_delivery.png'/>" ></div>
+					<div style="display: inline-block; width: 10px;"></div>
+					<div style=" display: inline-block;">	<img src="<c:url value='/ui/images/pickup.png'/>" ></div>
+					
 				</div>
-				<div style="margin: 0 100px;"> <hr style="margin: 0 100px;"> </div>
+				<div> <hr> </div>
 			</section>
 			<br/> <br/>
 			<section style="text-align: left;">
