@@ -35,8 +35,14 @@
 					<label>Confirm Password</label>
 					<form:password path="confirmPassword" placeHolder="Confirm Password" required="true"/><br/> <form:errors path="confirmPassword" cssStyle="color:red "/>
 					<br />
+					
+					
 					<label>Address</label>
 					<form:input path="address1" placeHolder="Blcok No / Street / Landmark " required="true" /><br/> <form:errors path="address1" cssStyle="color:red "/>
+					<br />
+					
+					<label>State</label>
+					<form:input path="state" placeHolder="State" required="true" /><br/> <form:errors path="address1" cssStyle="color:red "/>
 					<br />
 					<label>City / Town</label>
 					<form:input path="address2" placeHolder="City / Town" required="true" /> <br/><form:errors path="address2" cssStyle="color:red "/>
