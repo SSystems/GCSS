@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -24,7 +25,8 @@ public abstract class AbstractModel implements Model {
 	protected String lastUpdateBy;
 	protected Date lastUpdateDate;
 	protected byte recordStatus;
-
+	public String jsonId;
+	
 	public AbstractModel() {
 	}
 
@@ -84,4 +86,14 @@ public abstract class AbstractModel implements Model {
 		this.recordStatus = recordStatus;
 	}
 
+	@Transient
+	public String getJsonId() {
+		return jsonId;
+	}
+
+	public void setJsonId(String jsonId) {
+		this.jsonId = jsonId;
+	}
+
+	
 }

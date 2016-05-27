@@ -8,8 +8,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name = "case_files")
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class,property="jsonId", scope=CaseFile.class)
+@JsonIgnoreProperties(ignoreUnknown=true, value={"hibernateLazyInitializer", "handler"})
 public class CaseFile extends AbstractModel {
 
 	private String fileName;

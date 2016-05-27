@@ -8,17 +8,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
-import javax.persistence.MapKey;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.globacomp.ssystem.data.model.AbstractModel;
 import com.globacomp.ssystem.data.model.User;
 
 @Entity
 @Table(name = "cart_master")
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class,property="jsonId", scope=Cart.class)
+@JsonIgnoreProperties(ignoreUnknown=true, value={"hibernateLazyInitializer", "handler"})
 public class Cart extends AbstractModel {
 
 	private static final long serialVersionUID = 315422907573362343L;

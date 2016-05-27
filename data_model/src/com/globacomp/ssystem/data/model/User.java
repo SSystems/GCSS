@@ -13,8 +13,14 @@ import javax.persistence.OneToOne;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name = "user_master")
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class,property="jsonId",scope=User.class)
+@JsonIgnoreProperties(ignoreUnknown=true, value={"hibernateLazyInitializer", "handler"})
 public class User extends AbstractModel {
 
 	private String firstName;

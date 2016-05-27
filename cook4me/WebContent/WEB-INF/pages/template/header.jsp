@@ -18,7 +18,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="<c:url value='/home'/>">
                         <img src="<c:url value='/ui/images/logo.png'/>" alt="Chef Come Cook">
                     </a>
                 </div>

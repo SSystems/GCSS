@@ -4,8 +4,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name = "user_files")
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class,property="jsonId",scope=UserFile.class)
+@JsonIgnoreProperties(ignoreUnknown=true, value={"hibernateLazyInitializer", "handler"})
 public class UserFile extends AbstractModel {
 
 	private static final long serialVersionUID = 1L;

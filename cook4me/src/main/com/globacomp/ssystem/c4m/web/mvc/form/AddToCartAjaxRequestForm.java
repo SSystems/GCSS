@@ -1,6 +1,6 @@
 package com.globacomp.ssystem.c4m.web.mvc.form;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class AddToCartAjaxRequestForm {

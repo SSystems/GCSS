@@ -1,7 +1,9 @@
 package com.globacomp.ssystem.c4m.service.impl;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import javax.transaction.Transactional;
 
@@ -40,7 +42,7 @@ public class CartServiceImpl extends AbstractApplicationService implements CartS
 			return null;
 		}
 		
-		Cart userCart = cartRepository.findSavedCartByUserId(userId);
+		Cart userCart = findUserCart(userId);
 		
 		if(userCart == null) {
 			System.out.println("No Saved Cart found for user:"+userId);
@@ -58,6 +60,7 @@ public class CartServiceImpl extends AbstractApplicationService implements CartS
 		if(cartLineItems.size() > 0 && cartLineItems.containsKey(productId) && cartLineItems.get(productId) != null) {
 				cartLineItem = cartLineItems.get(productId);
 				cartLineItem.setQuantity(cartLineItem.getQuantity()+1);
+				cartLineItem.setExtendedPrice(cartLineItem.getProduct().getPrice()* cartLineItem.getQuantity());
 		}
 		else {
 			cartLineItem = createCartLineItem(userCart, productId);
@@ -66,6 +69,8 @@ public class CartServiceImpl extends AbstractApplicationService implements CartS
 		}
 		
 		userCart.setCartStatus(CartStatus.SAVED.getStatus());
+		
+		repriceCart(userCart);
 		cartRepository.save(userCart);
 		
 		return userCart;
@@ -103,7 +108,65 @@ public class CartServiceImpl extends AbstractApplicationService implements CartS
 		CartLineItem cartLineItem = new CartLineItem(cart);
 		cartLineItem.setProduct(product);
 		cartLineItem.setQuantity(1);
+		cartLineItem.setExtendedPrice(cartLineItem.getQuantity()*product.getPrice());
 		return cartLineItem;
+		
+	}
+
+	@Override
+	public Cart findUserCart(String userId) {
+		return cartRepository.findSavedCartByUserId(userId);
+	}
+
+	@Override
+	public Cart findCart(String cartId) {
+		return cartRepository.findOne(cartId);
+	}
+
+	@Override
+	public Cart updateQuantity(String cartId, Collection<CartLineItem> cartLineItems) {
+		
+		Cart dbCart = findCart(cartId);
+		
+		if(dbCart == null)
+			return null;
+		
+		if(cartLineItems == null)
+			return null;
+		
+		if(cartLineItems.isEmpty())
+			return null;
+		
+		Map<String, CartLineItem> dbCartLineItems = dbCart.getCartLineItems();
+		
+		for (CartLineItem cartLineItem : cartLineItems) {
+			
+			CartLineItem dbCartLineItem = dbCartLineItems.get(cartLineItem.getProduct().getId());
+			
+			if(dbCartLineItem != null) {
+				
+				dbCartLineItem.setQuantity(cartLineItem.getQuantity());
+				dbCartLineItem.setExtendedPrice(dbCartLineItem.getQuantity() * dbCartLineItem.getProduct().getPrice());
+			}
+			
+		}
+		
+		repriceCart(dbCart);
+		
+		return dbCart;
+	}
+	
+	public void repriceCart(Cart cart) {
+		
+		//cart = cartRepository.findOne(cart.getId());
+		
+		double totalCartPrice = 0;
+		
+		for (CartLineItem cartLineItem : cart.getCartLineItems().values()) {
+			totalCartPrice+= cartLineItem.getExtendedPrice();
+		}
+		
+		cart.setTotalCartPrice(totalCartPrice);
 		
 	}
 

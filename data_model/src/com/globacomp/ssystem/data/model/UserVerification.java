@@ -10,8 +10,14 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name = "user_verification")
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class,property="jsonId",scope=UserVerification.class)
+@JsonIgnoreProperties(ignoreUnknown=true, value={"hibernateLazyInitializer", "handler"})
 public class UserVerification extends AbstractModel {
 
 	private User user;

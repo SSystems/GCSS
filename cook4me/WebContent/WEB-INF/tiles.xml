@@ -50,6 +50,10 @@
 		<put-attribute name="body" value="/WEB-INF/pages/common/home.jsp" />
 	</definition>
 	
+	<!--  Cart Views -->
+	<definition name="cart/*" extends="defaultView">
+		<put-attribute name="body" value="/WEB-INF/pages/cart/{1}.jsp" />
+	</definition>
 	
 	<!--  Common Views -->
 	<definition name="common/*" extends="defaultView">

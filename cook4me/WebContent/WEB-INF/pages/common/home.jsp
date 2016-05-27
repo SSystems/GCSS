@@ -19,10 +19,9 @@
                 },
               	data: JSON.stringify({productId:productId}),
                 success:function(result){
+                	alert("Item added to cart");
           			count = result.totalCartLineItem;
-          			alert($('#cartLineItemCount').text());
           			$('#cartLineItemCount').html(count);
-          			alert(count);
         		},
         		error:function(jqXHR, textStatus, errorThrown ){
         			alert(data);
@@ -31,11 +30,8 @@
         			alert(errorThrown);
         		}
        		});
-        alert(count);
       });
-      function addToCart(userId, productId) {
-    	  alert('button clicked');
-      }
+   
     });
     </script>
     
@@ -61,7 +57,7 @@
                         </li>
                         <li><a href="#ourmenu">Our Menu</a>
                         </li>
-                        <li class="cart"><a href="shopping-cart.html"><span id="cartLineItemCount" >0</span></a>
+                        <li class="cart"><a href="<c:url value='/cart/view_cart'/>"><span id="cartLineItemCount" >0</span></a>
                         </li>
                         <%
 						WebUser user = (WebUser) session.getAttribute(WebUser.SESSION_ATTRIBUTE);
@@ -226,7 +222,7 @@
 								<p>Lorum ipsum to the beautifully filled pasta</p>
 								<div class="caption-btn">
 									<a href="javascript:;" class="btn">Hire Chef</a> <a
-										href="" onclick="addToCart(null,null)" class="btn">Add to cart</a>
+										href="" class="btn addToCart" data-product-id="12">Add to cart</a>
 								</div>
 							</div>
 							<!-- /.caption-content -->
@@ -243,7 +239,7 @@
 								<p>Lorum ipsum to the beautifully filled pasta</p>
 								<div class="caption-btn">
 									<a href="javascript:;" class="btn">Hire Chef</a> <a
-										href="javascript:;" class="btn">Add to cart</a>
+										href="javascript:;" class="btn addToCart" data-product-id="14">Add to cart</a>
 								</div>
 							</div>
 							<!-- /.caption-content -->
@@ -260,7 +256,7 @@
 								<p>Lorum ipsum to the beautifully filled pasta</p>
 								<div class="caption-btn">
 									<a href="javascript:;" class="btn">Hire Chef</a> <a
-										href="javascript:;" class="btn">Add to cart</a>
+										href="javascript:;" class="btn addToCart" data-product-id="13">Add to cart</a>
 								</div>
 							</div>
 							<!-- /.caption-content -->

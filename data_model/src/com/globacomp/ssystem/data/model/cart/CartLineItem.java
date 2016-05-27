@@ -7,11 +7,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.globacomp.ssystem.data.model.AbstractModel;
 import com.globacomp.ssystem.data.model.inventory.Product;
 
 @Entity
 @Table(name = "cart_line_item")
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class,property="jsonId", scope=CartLineItem.class)
+@JsonIgnoreProperties(ignoreUnknown=true, value={"hibernateLazyInitializer", "handler"})
 public class CartLineItem extends AbstractModel {
 
 	private static final long serialVersionUID = -7330712134978405610L;

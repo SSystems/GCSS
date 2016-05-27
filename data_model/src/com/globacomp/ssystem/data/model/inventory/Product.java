@@ -12,11 +12,16 @@ import javax.persistence.OneToOne;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.globacomp.ssystem.data.model.AbstractModel;
 import com.globacomp.ssystem.data.model.User;
 
 @Entity
 @Table(name="product_master")
+@JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class,property="jsonId",scope=Product.class)
+@JsonIgnoreProperties(ignoreUnknown=true, value={"hibernateLazyInitializer", "handler"})
 public class Product extends AbstractModel {
 
 	private static final long serialVersionUID = -4815484692326128298L;
