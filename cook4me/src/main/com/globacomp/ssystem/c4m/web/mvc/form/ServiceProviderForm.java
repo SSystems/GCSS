@@ -44,6 +44,18 @@ public class ServiceProviderForm {
 	private String address2;
 	
 	@NotBlank
+	@Size(min=3, max=40)
+	private String state;
+	
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	@NotBlank
 	@Size(min=5, max=15)
 	private String pincode;
 	

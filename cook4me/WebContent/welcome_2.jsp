@@ -76,17 +76,8 @@
 	<section>
 		<article id="why_us">
 			<h3>Why ChefComeCook</h3>
-			<p>The average couple (2 people) spends $40-$50 going out for
-				about an hour of outside time. ChefComeCook brings the Chef to your
-				house, and you will have the option of get what you want prepared or
-				cook from whats at hand. Chefs do not take more than 2 hours to cook
-				and our chefs come cheap averaging $15 an hour, and any cost of
-				groceries goes on fixed increments depending on amount of people. So
-				for let’s say for this scenario 2 people and they order a Chef, in
-				the price for just food to be made will not exceed $30, and they
-				have great meal! From the entire transaction the way ChefComeCook
-				will generate revenue is by taking a small percentage of the entire
-				transaction.</p>
+			<p>Chef Come Cook is designed to help you express your love for cooking through meals you are comfortable with creating while also increasing your knowledge of cooking through dishes requested by your customers! This is especially good for learning chefs but also good for people who just enjoy cooking. We allow you to make up your own hours and create your own rates as well as decide how the food is delivered to the customer. Your schedules and rate of income are completely decided on you. Everything is decided on you and your own personal needs.
+.</p>
 		</article>
 	</section>
 	<!-- <section>

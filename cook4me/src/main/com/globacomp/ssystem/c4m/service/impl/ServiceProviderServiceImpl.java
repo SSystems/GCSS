@@ -68,6 +68,7 @@ public class ServiceProviderServiceImpl extends AbstractApplicationService imple
 		Address address = new Address();
 		address.setAddressLine1(serviceProviderForm.getAddress1());
 		address.setAddressLine2(serviceProviderForm.getAddress2());
+		address.setState(serviceProviderForm.getState());
 		address.setZipcode(serviceProviderForm.getPincode());
 		address.setTelephoneNumber(serviceProviderForm.getMobileNumber());
 		address.setUser(user);
