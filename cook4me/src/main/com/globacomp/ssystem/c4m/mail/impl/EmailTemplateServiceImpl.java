@@ -37,6 +37,11 @@ public class EmailTemplateServiceImpl implements EmailTemplateService {
 		
 		User user = login.getUser();
 		
+		Map<String, Object> modelMap = new HashMap<>();
+		modelMap.put("name", user.getFirstName());
+		modelMap.put("password", login.getPassword());
+		
+		mailSender.sendMailFromTemplate(FORGOT_PASSWORD_EMAIL_SUBJECT, FORGOT_PASSWORD_EMAIL_TEMPLATE_PATH, modelMap, user.getEmail());
 	}
 	
 	

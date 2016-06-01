@@ -32,5 +32,24 @@ public class MailSenderTest extends ChefComeCookContextTest {
 			this.wait(30000);
 		}
 	}
+	
+
+	@Test
+	public void testForgotPassword() throws InterruptedException {
+		
+		String to[] = {"mihirgohel@gmail.com"};
+		String cc[] ={};
+		String bcc[] = {};
+		
+		Map<String, Object> model = new HashMap<String, Object>();
+		model.put("name", "Mihir Gohel");
+		model.put("password", "ABC");
+		
+		mailSender.sendMailFromTemplate(EmailTemplateService.FORGOT_PASSWORD_EMAIL_SUBJECT, EmailTemplateService.FORGOT_PASSWORD_EMAIL_TEMPLATE_PATH,model, to);
+		
+		synchronized (this) {
+			this.wait(30000);
+		}
+	}
 }
 
