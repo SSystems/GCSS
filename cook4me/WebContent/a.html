@@ -1,27 +1,57 @@
-<section id="user_login">
-				<form id="user_login1" method="post"
-					action="http://example.com/processform/">
-					<label for="user_name">User Name</label> <input type="text"
-						id="user_name" placeholder="E-Mail ID" autofocus required> <label
-						for="password">Password</label> <input type="password"
-						id="password" placeholder="Password" required>
-					<div class="action_btns">
-						<div>
-							<a href="#" class="Register">Register</a>
-						</div>
-						<input type="submit" value="Login">
-					</div>
-				</form>
-				<a href="#" class="forgot_password">Forgot password?</a>
-			</section>
-			<section id="registration_form">
-				<p>
-					Please read the requirements to register at <a href="#">How we
-						Work</a> and <a href="registration.html">Click Here</a> to register.
-				</p>
-				<div class="action_btns">
-					<div id="second">
-						<a href="#" class="back">back</a>
-					</div>
-				</div>
-			</section>
+#set ($verificationUrl="http://www.chefcomecook.com/verifyemail?verification_code=")
+<html>
+<body style="font-family: 'Gotham-light'; font-size: 14px;">
+
+	<table style="width: 100%; border: rgba(240, 240, 240, 0.95) thin solid;">
+		<tr id="header" style="background-color: rgba(240, 240, 240, 0.95); padding: 10px 0px; ">
+			<td style="padding: 10px 0px 10px 20px;">
+				<img alt="ChefComeCook" src="http://www.chefcomecook.com/ui/images/logo.png"></td>
+		</tr>
+		<tr id="content">
+			<td style="padding: 0 20px 20px 20px;">
+				<table style="width: 100%;">
+					<tr>
+						<td>
+							<p>Welcome ${name},</p> <br/> 
+							
+							<p> You are just one step away from
+							becoming a part of Chef Come Cook! Please verify your email
+							address by clicking the link below! </p>
+							<br/>
+							</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<a href="${verificationUrl}${verificationCode}"> <button style="background-color: #96272c; border-color: #96272c; font-size: 16px; height: 50px; padding: 10px; color: #fff;">Verify Account...!!</button> </a>
+						</td>
+					<tr>
+					<tr>
+						<td>
+							<p> If you are not able to click the button, please copy below URL and paste in your browser. </p>
+							<p>${verificationUrl}${verificationCode}</p> <br/>
+							<p>Activation URL will be valid till ${validTill}</p> <br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p> Best Regards, <br/> Team ChefComeCook </p>
+						</td>
+					<tr>
+				</table>
+			</td>
+		</tr>
+		<tr id="footer">
+			<td
+				style="background-color: #474747; color: #ccc; text-align: center; padding: 10px 0px;">
+				<img alt="ChefComeCook - Google Plus "
+				src="http://localhost:8080/cook4me/ui/images/icon-googleplus.png"> <img
+				alt="ChefComeCook - Twitter"
+				src="http://localhost:8080/cook4me/ui/images/icon-twitter.png"> <img
+				alt="ChefComeCook - Facebook"
+				src="http://localhost:8080/cook4me/ui/images/icon-facebook.png"> <br />
+				<p class="text-center">2016 &copy; Chefcomecook, Inc.</p>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

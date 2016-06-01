@@ -1,0 +1,21 @@
+<html>
+<body>
+<div>
+<p>Hi ${agent.employee.contact.firstName} ${agent.employee.contact.lastName}, <br/>
+	Welcome to mProductivitySuite, <br/>
+	You are registered to our system successfully. You will receive a notification email shortly once your account is activated.
+</p>
+</div>
+
+<div>
+	<p> Login Credentials <br/>
+		Username : ${agent.employee.login.username} <br/>
+		Password : ${agent.employee.login.password} 
+	</p>
+</div>
+<div>
+   Your email address is <a href="mailto:${agent.employee.contact.primaryEmail}">${agent.employee.contact.primaryEmail}</a>.
+</div>
+</body>
+
+</html>

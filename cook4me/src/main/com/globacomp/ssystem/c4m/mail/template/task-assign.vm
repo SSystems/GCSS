@@ -1,0 +1,25 @@
+<html>
+<body>
+<div>
+<p>Hi ${employee.contact.firstName} ${employee.contact.lastName}, <br/>
+	You have been assigned a Tasks, <br/>
+	
+	<table border="1">
+	
+	#foreach($task in $tasks)
+		
+		<tr>
+			<td> ${task.code}	</td>
+			<td> ${task.taskPriority}	</td>
+			<td> ${task.taskType}	</td>
+		</tr>
+	#end
+	</table>
+</p>
+</div>
+<div>
+   Your email address is <a href="mailto:${employee.contact.primaryEmail}">${employee.contact.primaryEmail}</a>.
+</div>
+</body>
+
+</html>
