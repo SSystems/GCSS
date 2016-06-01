@@ -38,10 +38,12 @@
 					<label>Address</label>
 					<form:input path="address1" placeHolder="Blcok No / Street / Landmark " required="true" /><br/> <form:errors path="address1" cssStyle="color:red "/>
 					<br />
-					<label>Are you a</label>
+					<label>State</label>
 					<form:select path="State">
-						<form:option value="0">Individual</form:option>
-						<form:option value="1">Organization</form:option>
+						<form:option value="0">Massachusetts</form:option>
+						<form:option value="1">Connecticut</form:option>
+						<form:option value="2">Rhode Island</form:option>
+						<form:option value="3">California</form:option>
 					</form:select>
 					<label>City / Town</label>
 					<form:input path="address2" placeHolder="City / Town" required="true" /> <br/><form:errors path="address2" cssStyle="color:red "/>
